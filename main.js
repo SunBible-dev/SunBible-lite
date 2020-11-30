@@ -24,6 +24,22 @@ app.on('ready', async () => {
 
     mainWindow.loadURL('https://the-sunshining.github.io/SunBible/')
     mainWindow.removeMenu()
+
+    // const { session } = require('electron')
+    // Get all service workers.
+    console.log(session.defaultSession.serviceWorkers.getAllRunning())
+
+    // Handle logs and get service worker info
+    session.defaultSession.serviceWorkers.on('console-message', (event, messageDetails) => {
+        console.log(
+            'Got service worker message',
+            messageDetails,
+            'from',
+            session.defaultSession.serviceWorkers.getFromVersionID(messageDetails.versionId)
+        )
+    })
+
+
 })
 
 
@@ -53,17 +69,3 @@ contextMenu({
 
 
 
-
-// const { session } = require('electron')
-// Get all service workers.
-console.log(session.defaultSession.serviceWorkers.getAllRunning())
-
-// Handle logs and get service worker info
-session.defaultSession.serviceWorkers.on('console-message', (event, messageDetails) => {
-    console.log(
-        'Got service worker message',
-        messageDetails,
-        'from',
-        session.defaultSession.serviceWorkers.getFromVersionID(messageDetails.versionId)
-    )
-})
