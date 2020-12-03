@@ -5,17 +5,13 @@ const { app, BrowserWindow, session } = require('electron')
 
 // Main App Activity: 
 app.on('ready', async () => {
-    // We cannot require the screen module until the
-    // app is ready
-    const { screen } = require('electron')
 
-    // Create a window that fills the sceen's available  work area.
-    const primaryDisplay = screen.getPrimaryDisplay()
-    const { width, height } = primaryDisplay.workAreaSize
 
     const mainWindow = new BrowserWindow({
-        width,
-        height,
+        alwaysOnTop: true,
+        minimizable: true,
+        width: 800,
+        height: 500,
         webPreferences: {
             nodeIntegration: true,
             webviewTag: true
