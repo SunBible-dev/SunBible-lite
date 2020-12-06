@@ -4,7 +4,7 @@
         "productName": "SunBible lite"
     },
     "name": "sunbible-lite",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "A light version of SunBible for desktop!",
     "main": "main.js",
     "homepage": "https://github.com/SunBible-dev/SunBible-lite",
@@ -31,6 +31,7 @@
         "pack": "electron-builder --dir",
         "dist": "electron-builder",
         "deb": "electron-builder --linux deb",
+        "rpm": "electron-builder --linux rpm",
         "AppImage": "electron-builder --linux AppImage",
         "snap": "electron-builder --linux snap",
         "apk": "electron-builder --linux apk",
