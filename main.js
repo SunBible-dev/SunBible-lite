@@ -56,6 +56,7 @@ contextMenu({
         actions.copyImage(),
         actions.saveImageAs(),
         { type: 'separator' },
+        { type: 'separator' },
         { role: 'togglefullscreen' },
         { role: 'close' }
 
