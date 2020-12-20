@@ -1,8 +1,9 @@
 body {
     background-color: tomato;
     margin: 0px;
-    padding: 0px;
-    padding: 5px;
+    padding-top: 25px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 iframe {
     height: 100vh;
