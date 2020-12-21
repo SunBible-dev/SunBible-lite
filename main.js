@@ -10,15 +10,16 @@ app.on('ready', async () => {
     const mainWindow = new BrowserWindow({
         alwaysOnTop: true,
         minimizable: true,
-        width: 800,
-        height: 500,
+        width: 1000,
+        height: 600,
+        frame: false,
         webPreferences: {
             nodeIntegration: true,
             webviewTag: true
         }
     })
 
-    mainWindow.loadURL('https://the-sunshining.github.io/SunBible/')
+    mainWindow.loadFile('app-iframe.html')
     mainWindow.removeMenu()
 
     // const { session } = require('electron')
@@ -56,7 +57,7 @@ contextMenu({
         actions.copyImage(),
         actions.saveImageAs(),
         { type: 'separator' },
-        { type: 'separator' },
+        { role: 'minimize'},
         { role: 'togglefullscreen' },
         { role: 'close' }
 
