@@ -20,19 +20,6 @@ app.on('ready', async () => {
     mainWindow.loadFile('app-iframe.html')
     mainWindow.removeMenu()
 
-    // const { session } = require('electron')
-    // Get all service workers.
-    console.log(session.defaultSession.serviceWorkers.getAllRunning())
-
-    // Handle logs and get service worker info
-    session.defaultSession.serviceWorkers.on('console-message', (event, messageDetails) => {
-        console.log(
-            'Got service worker message',
-            messageDetails,
-            'from',
-            session.defaultSession.serviceWorkers.getFromVersionID(messageDetails.versionId)
-        )
-    })
 
 
 })
@@ -66,6 +53,7 @@ const template = [
       { role: 'hideothers' },
       { role: 'unhide' },
       { type: 'separator' },
+      { role: 'about' },
       { role: 'quit' }
     ]
   }] : []),
