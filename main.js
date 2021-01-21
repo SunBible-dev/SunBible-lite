@@ -62,6 +62,13 @@ const template = [
           await shell.openExternal('https://medium.com/sunbible')
         }
       },
+      {
+        label: 'Check for updates',
+        click: async () => {
+          const { shell } = require('electron')
+          await shell.openExternal('https://github.com/SunBible-dev/SunBible-lite/releases')
+        }
+      },
       { type: 'separator' },
       { role: 'hide' },
       { role: 'hideothers' },
