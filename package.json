@@ -4,7 +4,7 @@
         "productName": "SunBible lite"
     },
     "name": "sunbible-lite",
-    "version": "0.0.5",
+    "version": "0.0.6",
     "description": "A light version of SunBible for desktop!",
     "main": "main.js",
     "homepage": "https://github.com/SunBible-dev/SunBible-lite",
