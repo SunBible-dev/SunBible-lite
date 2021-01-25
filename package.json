@@ -4,7 +4,7 @@
         "productName": "SunBible lite"
     },
     "name": "sunbible-lite",
-    "version": "0.0.6",
+    "version": "0.0.6-beta",
     "description": "A light version of SunBible for desktop!",
     "main": "main.js",
     "homepage": "https://github.com/SunBible-dev/SunBible-lite",
@@ -23,7 +23,7 @@
         "url": "https://github.com/SunBible-dev/SunBible-lite.git"
     },
     "devDependencies": {
-        "electron": "^11.0.3",
+        "electron": "^12.0.0-beta.16",
         "electron-builder": "^22.9.1"
     },
     "scripts": {
@@ -38,7 +38,8 @@
         "appx": "electron-builder --windows appx",
         "nsis": "electron-builder --win nsis",
         "nsis-web": "electron-builder --win nsis-web",
-        "dmg": "electron-builder --mac dmg"
+        "dmg": "electron-builder --mac dmg",
+        "dmg:arm64": "electron-builder --mac dmg:arm64"
     },
     "dependencies": {
         "electron-context-menu": "^2.3.0"
